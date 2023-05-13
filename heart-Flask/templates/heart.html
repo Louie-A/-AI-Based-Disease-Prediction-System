@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Disease Diagnosis</title>
+  <link rel="stylesheet" href="../static/heart.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='heart.css')}}" />
+</head>
+<body>
+
+<!--#################################################################################################-->
+
+<header>
+  <h1 class="logo"><a style="text-decoration: none; color: white;" href="../../index.html">AIM</a></h1>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../pages/reports.html">Reports</a></li>
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>
+
+<!--#################################################################################################-->
+
+<div class="result rainbow">
+  <h2>Your Result:</h2>
+  <div class="result_text">{{result}}</div>
+  <h4>Fill in below to generate your result</h4>
+</div>
+
+<!--#################################################################################################-->
+<div class="diagnose">
+  <div class="container ">
+    <div class="header">
+      <h1>Diabetes Diagnosis</h1>
+    </div>
+    <div class="input_form">
+      <form action = "{{ url_for('uploader')}}" method="POST"  class="input_form">
+        <label for="age">Age of the Person:</label>
+        <input type="number" id="age" name="age" required>
+  
+        <label for="sex">Sex:</label>
+        <input type="number" id="sex" name="sex" required>
+  
+        <label for="cp">Chest Pain Types:</label>
+        <input type="number" id="cp" name="cp" required>
+  
+        <label for="trestbps">Resting Blood Pressure:</label>
+        <input type="number" id="trestbps" name="trestbps" required>
+  
+        <label for="chol">Serum Cholestoral in mg/dl:</label>
+        <input type="number" id="chol" name="chol" required>
+  
+        <label for="fbs">Fasting Blood Sugar > 120 mg/dl:</label>
+        <input type="number" id="fbs" name="fbs" required>
+  
+        <label for="restecq">Resting Electrocardiographic Results:</label>
+        <input type="number" id="restecq" name="restecq" required>
+  
+        <label for="thalach">Maximum Heart Rate Achieved:</label>
+        <input type="number" id="thalach" name="thalach" required>
+
+        <label for="exang">Exercise Induced Angina:</label>
+        <input type="number" id="exang" name="exang" required>
+  
+        <label for="oldpeak">Insulin Level:</label>
+        <input type="number" id="oldpeak" name="oldpeak" required>
+  
+        <label for="slope">BMI:</label>
+        <input type="number" id="slope" name="slope" required>
+  
+        <label for="ca">Age of the Person:</label>
+        <input type="number" id="ca" name="ca" required>
+  
+        <label for="thal">Diabetes Pedigree Function:</label>
+        <input type="number" id="thal" name="thal" required>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+  </div>
+ </div>
+ 
+</body>
+</html>

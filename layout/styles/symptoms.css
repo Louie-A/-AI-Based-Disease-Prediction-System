@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
+
+.text-wrapper {
+  /* position: relative; */
+  height: 60vh;
+  width: 100%;
+  display: table;
+  background-image: url(../../images/background_symptoms.png);
+  font-family: 'Asap', sans-serif;
+  /* overflow: hidden; */
+}
+.text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+}
+.text-heading, .text-subheading {
+  opacity: 0;
+  margin: 0 0 1rem 0;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+.text-heading {
+  font-size: 3rem;
+  animation-name: bounce-right;
+  animation-duration: 0.6s;
+}
+.text-subheading {
+  font-size: 1.5rem;
+  animation-name: bounce-left;
+  animation-duration: 0.6s;
+}
+.buttons {
+  overflow: hidden;
+  margin: 2rem 0 0 0;
+  display: block;
+}
+.btn {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  background: black;
+  margin: 0 .5rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: .25rem;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn--primary {
+  background: #1f4d52;
+}
+
+@keyframes bounce-right {
+  0% {
+    opacity: .2;
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: .7;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes bounce-left {
+  0% {
+    opacity: .2;
+    transform: translateX(200px);
+  }
+  50% {
+    opacity: .7;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*------------------Symptoms----------------------------------------------------------------------------*/

@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
+
+.text-wrapper {
+  /* position: relative; */
+  height: 60vh;
+  width: 100%;
+  display: table;
+  background-image: url(../../images/background_reports.png);
+  font-family: 'Asap', sans-serif;
+  /* overflow: hidden; */
+}
+.text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+}
+.text-heading, .text-subheading {
+  opacity: 0;
+  margin: 0 0 1rem 0;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+.text-heading {
+  font-size: 3rem;
+  animation-name: bounce-right;
+  animation-duration: 0.6s;
+}
+.text-subheading {
+  font-size: 1.5rem;
+  animation-name: bounce-left;
+  animation-duration: 0.6s;
+}
+.buttons {
+  overflow: hidden;
+  margin: 2rem 0 0 0;
+  display: block;
+}
+.btn {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  background: black;
+  margin: 0 .5rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: .25rem;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn--primary {
+  background: #1f4d52;
+}
+
+@keyframes bounce-right {
+  0% {
+    opacity: .2;
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: .7;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes bounce-left {
+  0% {
+    opacity: .2;
+    transform: translateX(200px);
+  }
+  50% {
+    opacity: .7;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*-------------Cards------------------------------------------------------------------------- */
+
+:root{
+    --text-light: rgba(255,255,255,0.6);
+    --text-lighter: rgba(255,255,255,0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+  }
+
+  .hero-section{
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+    padding-bottom: 7%;
+  }
+  
+  .card-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+  }
+  
+  @media(min-width: 540px){
+    .card-grid{
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media(min-width: 960px){
+    .card-grid{
+      grid-template-columns: repeat(4, 1fr); 
+    }
+  }
+  
+  .card{
+    list-style: none;
+    position: relative;
+  }
+  
+  .card:before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+  }
+  
+  .card__background{
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: 
+      filter 200ms linear,
+      transform 200ms linear;
+  }
+  
+  .card:hover .card__background{
+    transform: scale(1.05) translateZ(0);
+  }
+  
+  .card-grid:hover > .card:not(:hover) .card__background{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  }
+  
+  .card__content{
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+  }
+  
+  .card__heading{
+    color: var(--text-lighter);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    line-height: 1.4;
+    padding-bottom: 50%;
+  }
+
+  .card_details{
+    color: white;
+    word-spacing: 0.1vw;
+    font-size: 110%;
+  }
+  .diagnose{
+    background-color: #f4f4f4;
+    text-align: center;
+    display: block;
+    overflow: hidden ;
+    padding-top: 4%;
+  }
+  .card_subheading{
+    color: white;
+  }
+
+  /*--------------------Card Slider-------------------------------------------------------------*/
+
+  

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Diagnosis</title>
+  <link rel="stylesheet" href="../static/diabetes.css">
+<!--<link rel="stylesheet" href="{{url_for('static', filename='diabetes.css')}}" />-->
+</head>
+<body>
+
+<!--#################################################################################################-->
+
+<header>
+  <h1 class="logo"><a style="text-decoration: none; color: white;" href="../../index.html">AIM</a></h1>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../pages/reports.html">Reports</a></li>
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>
+
+<!--#################################################################################################-->
+
+<div class="result rainbow">
+  <h2>Your Result:</h2>
+  <div class="result_text">{{result}}</div>
+  <h4>Fill in below to generate your result</h4>
+</div>
+
+<!--#################################################################################################-->
+<div class="diagnose">
+  <div class="container ">
+    <div class="header">
+      <h1>Diabetes Diagnosis</h1>
+    </div>
+    <div class="input_form">
+      <form action = "{{ url_for('uploader')}}" method="POST"  class="input_form">
+        <label for="pregnancies">Number of Pregnancies:</label>
+        <input type="number" id="pregnancies" name="pregnancies" required>
+  
+        <label for="glucose">Glucose Level:</label>
+        <input type="number" id="glucose" name="glucose" required>
+  
+        <label for="bloodpressure">Blood Pressure:</label>
+        <input type="number" id="bloodpressure" name="bloodpressure" required>
+  
+        <label for="skinthickness">Skin Thickness:</label>
+        <input type="number" id="skinthickness" name="skinthickness" required>
+  
+        <label for="insulin">Insulin Level:</label>
+        <input type="number" id="insulin" name="insulin" required>
+  
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.01" required>
+  
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+  
+        <label for="diabetespredigreefunction">Diabetes Pedigree Function:</label>
+        <input type="number" id="diabetespredigreefunction" name="diabetespredigreefunction" step="0.001" required>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+  </div>
+ </div>
+
+</body>
+</html>
